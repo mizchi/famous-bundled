@@ -1,4 +1,4 @@
-var famous = {
+window.famous = {
     core: {
         Context: require('./core/Context'),
         ElementAllocator: require('./core/ElementAllocator'),
@@ -12,7 +12,7 @@ var famous = {
         RenderNode: require('./core/RenderNode'),
         Scene: require('./core/Scene'),
         SpecParser: require('./core/SpecParser'),
-        Surface: srequire('./core/Surface'),
+        Surface: require('./core/Surface'),
         Transform: require('./core/Transform'),
         View: require('./core/View'),
         ViewSequence: require('./core/ViewSequence')

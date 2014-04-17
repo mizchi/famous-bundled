@@ -1,4 +1,129 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+window.famous = {
+    core: {
+        Context: require('./core/Context'),
+        ElementAllocator: require('./core/ElementAllocator'),
+        Engine: require('./core/Engine'),
+        Entity: require('./core/Entity'),
+        EventEmitter: require('./core/EventEmitter'),
+        EventHandler: require('./core/EventHandler'),
+        Group: require('./core/Group'),
+        Modifier: require('./core/Modifier'),
+        OptionsManager: require('./core/OptionsManager'),
+        RenderNode: require('./core/RenderNode'),
+        Scene: require('./core/Scene'),
+        SpecParser: require('./core/SpecParser'),
+        Surface: require('./core/Surface'),
+        Transform: require('./core/Transform'),
+        View: require('./core/View'),
+        ViewSequence: require('./core/ViewSequence')
+    },
+    events: {
+        EventArbiter: require('./events/EventArbiter'),
+        EventFilter: require('./events/EventFilter'),
+        EventMapper: require('./events/EventMapper')
+    },
+    inputs: {
+        FastClick: require('./inputs/FastClick'),
+        GenericSync: require('./inputs/GenericSync'),
+        MouseSync: require('./inputs/MouseSync'),
+        PinchSync: require('./inputs/PinchSync'),
+        RotateSync: require('./inputs/RotateSync'),
+        ScaleSync: require('./inputs/ScaleSync'),
+        ScrollSync: require('./inputs/ScrollSync'),
+        TouchSync: require('./inputs/TouchSync'),
+        TouchTracker: require('./inputs/TouchTracker'),
+        TwoFingerSync: require('./inputs/TwoFingerSync')
+    },
+    math: {
+        Matrix: require('./math/Matrix'),
+        Quaternion: require('./math/Quaternion'),
+        Random: require('./math/Random'),
+        Utilities: require('./math/Utilities'),
+        Vector: require('./math/Vector')
+    },
+    modifiers: {
+        Draggable: require('./modifiers/Draggable'),
+        Fader: require('./modifiers/Fader'),
+        ModifierChain: require('./modifiers/ModifierChain'),
+        StateModifier: require('./modifiers/StateModifier')
+    },
+    physics: {
+        bodies: {
+            Body: require('./physics/bodies/Body'),
+            Circle: require('./physics/bodies/Circle'),
+            Particle: require('./physics/bodies/Particle'),
+            Rectangle: require('./physics/bodies/Rectangle')
+        },
+        constraints: {
+            Collision: require('./physics/constraints/Collision'),
+            Constraint: require('./physics/constraints/Constraint'),
+            Curve: require('./physics/constraints/Curve'),
+            Distance: require('./physics/constraints/Distance'),
+            Snap: require('./physics/constraints/Snap'),
+            Surface: require('./physics/constraints/Surface'),
+            Wall: require('./physics/constraints/Wall'),
+            Walls: require('./physics/constraints/Walls')
+        },
+        forces: {
+            Drag: require('./physics/forces/Drag'),
+            Force: require('./physics/forces/Force'),
+            Repulsion: require('./physics/forces/Repulsion'),
+            RotationalDrag: require('./physics/forces/RotationalDrag'),
+            RotationalSpring: require('./physics/forces/RotationalSpring'),
+            Spring: require('./physics/forces/Spring'),
+            VectorField: require('./physics/forces/VectorField')
+        },
+        integrators: {
+            SymplecticEuler: require('./physics/integrators/SymplecticEuler')
+        },
+        PhysicsEngine: require('./physics/PhysicsEngine')
+    },
+    surfaces: {
+        CanvasSurface: require('./surfaces/CanvasSurface'),
+        ContainerSurface: require('./surfaces/ContainerSurface'),
+        ImageSurface: require('./surfaces/ImageSurface'),
+        InputSurface: require('./surfaces/InputSurface'),
+        VideoSurface: require('./surfaces/VideoSurface')
+    },
+    transitions: {
+        CachedMap: require('./transitions/CachedMap'),
+        Easing: require('./transitions/Easing'),
+        MultipleTransition: require('./transitions/MultipleTransition'),
+        SnapTransition: require('./transitions/SnapTransition'),
+        SpringTransition: require('./transitions/SpringTransition'),
+        Transitionable: require('./transitions/Transitionable'),
+        TransitionableTransform: require('./transitions/TransitionableTransform'),
+        TweenTransition: require('./transitions/TweenTransition'),
+        WallTransition: require('./transitions/WallTransition')
+    },
+    utilities: {
+        KeyCodes: require('./utilities/KeyCodes'),
+        Timer: require('./utilities/Timer'),
+        Utility: require('./utilities/Utility')
+    },
+    views: {
+        Deck: require('./views/Deck'),
+        EdgeSwapper: require('./views/EdgeSwapper'),
+        Flipper: require('./views/Flipper'),
+        GridLayout: require('./views/GridLayout'),
+        HeaderFooterLayout: require('./views/HeaderFooterLayout'),
+        Lightbox: require('./views/Lightbox'),
+        RenderController: require('./views/RenderController'),
+        ScrollContainer: require('./views/ScrollContainer'),
+        Scroller: require('./views/Scroller'),
+        Scrollview: require('./views/ScrollView'),
+        SequentialLayout: require('./views/SequentialLayout')
+    },
+    widgets: {
+        NavigationBar: require('./widgets/NavigationBar'),
+        Slider: require('./widgets/Slider'),
+        TabBar: require('./widgets/TabBar'),
+        ToggleButton: require('./widgets/ToggleButton'),
+    }
+};
+
+},{"./core/Context":2,"./core/ElementAllocator":3,"./core/Engine":4,"./core/Entity":5,"./core/EventEmitter":6,"./core/EventHandler":7,"./core/Group":8,"./core/Modifier":9,"./core/OptionsManager":10,"./core/RenderNode":11,"./core/Scene":12,"./core/SpecParser":13,"./core/Surface":14,"./core/Transform":15,"./core/View":16,"./core/ViewSequence":17,"./events/EventArbiter":18,"./events/EventFilter":19,"./events/EventMapper":20,"./inputs/FastClick":21,"./inputs/GenericSync":22,"./inputs/MouseSync":23,"./inputs/PinchSync":24,"./inputs/RotateSync":25,"./inputs/ScaleSync":26,"./inputs/ScrollSync":27,"./inputs/TouchSync":28,"./inputs/TouchTracker":29,"./inputs/TwoFingerSync":30,"./math/Matrix":31,"./math/Quaternion":32,"./math/Random":33,"./math/Utilities":34,"./math/Vector":35,"./modifiers/Draggable":36,"./modifiers/Fader":37,"./modifiers/ModifierChain":38,"./modifiers/StateModifier":39,"./physics/PhysicsEngine":40,"./physics/bodies/Body":41,"./physics/bodies/Circle":42,"./physics/bodies/Particle":43,"./physics/bodies/Rectangle":44,"./physics/constraints/Collision":45,"./physics/constraints/Constraint":46,"./physics/constraints/Curve":47,"./physics/constraints/Distance":48,"./physics/constraints/Snap":49,"./physics/constraints/Surface":50,"./physics/constraints/Wall":51,"./physics/constraints/Walls":52,"./physics/forces/Drag":53,"./physics/forces/Force":54,"./physics/forces/Repulsion":55,"./physics/forces/RotationalDrag":56,"./physics/forces/RotationalSpring":57,"./physics/forces/Spring":58,"./physics/forces/VectorField":59,"./physics/integrators/SymplecticEuler":60,"./surfaces/CanvasSurface":61,"./surfaces/ContainerSurface":62,"./surfaces/ImageSurface":63,"./surfaces/InputSurface":64,"./surfaces/VideoSurface":65,"./transitions/CachedMap":66,"./transitions/Easing":67,"./transitions/MultipleTransition":68,"./transitions/SnapTransition":69,"./transitions/SpringTransition":70,"./transitions/Transitionable":71,"./transitions/TransitionableTransform":72,"./transitions/TweenTransition":73,"./transitions/WallTransition":74,"./utilities/KeyCodes":75,"./utilities/Timer":76,"./utilities/Utility":77,"./views/Deck":78,"./views/EdgeSwapper":79,"./views/Flipper":80,"./views/GridLayout":81,"./views/HeaderFooterLayout":82,"./views/Lightbox":83,"./views/RenderController":84,"./views/ScrollContainer":85,"./views/ScrollView":86,"./views/Scroller":87,"./views/SequentialLayout":89,"./widgets/NavigationBar":90,"./widgets/Slider":91,"./widgets/TabBar":92,"./widgets/ToggleButton":93}],2:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -225,7 +350,7 @@ Context.prototype.unpipe = function unpipe(target) {
 module.exports = Context;
 
 
-},{"../transitions/Transitionable":71,"./ElementAllocator":2,"./EventHandler":6,"./RenderNode":10,"./Transform":14}],2:[function(require,module,exports){
+},{"../transitions/Transitionable":71,"./ElementAllocator":3,"./EventHandler":7,"./RenderNode":11,"./Transform":15}],3:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -333,7 +458,7 @@ ElementAllocator.prototype.getNodeCount = function getNodeCount() {
 module.exports = ElementAllocator;
 
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -673,7 +798,7 @@ optionsManager.on('change', function(data) {
 module.exports = Engine;
 
 
-},{"./Context":1,"./EventHandler":6,"./OptionsManager":9}],4:[function(require,module,exports){
+},{"./Context":2,"./EventHandler":7,"./OptionsManager":10}],5:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -752,7 +877,7 @@ module.exports = {
 };
 
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -846,7 +971,7 @@ EventEmitter.prototype.bindThis = function bindThis(owner) {
 module.exports = EventEmitter;
 
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -1054,7 +1179,7 @@ EventHandler.prototype.unsubscribe = function unsubscribe(source) {
 module.exports = EventHandler;
 
 
-},{"./EventEmitter":5}],7:[function(require,module,exports){
+},{"./EventEmitter":6}],8:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -1180,7 +1305,7 @@ Group.prototype.commit = function commit(context) {
 module.exports = Group;
 
 
-},{"./Context":1,"./Surface":13,"./Transform":14}],8:[function(require,module,exports){
+},{"./Context":2,"./Surface":14,"./Transform":15}],9:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -1500,7 +1625,7 @@ Modifier.prototype.modify = function modify(target) {
 module.exports = Modifier;
 
 
-},{"../transitions/Transitionable":71,"../transitions/TransitionableTransform":72,"./Transform":14}],9:[function(require,module,exports){
+},{"../transitions/Transitionable":71,"../transitions/TransitionableTransform":72,"./Transform":15}],10:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -1714,7 +1839,7 @@ OptionsManager.prototype.unpipe = function unpipe() {
 module.exports = OptionsManager;
 
 
-},{"./EventHandler":6}],10:[function(require,module,exports){
+},{"./EventHandler":7}],11:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -1883,7 +2008,7 @@ RenderNode.prototype.render = function render() {
 module.exports = RenderNode;
 
 
-},{"./Entity":4,"./SpecParser":12}],11:[function(require,module,exports){
+},{"./Entity":5,"./SpecParser":13}],12:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -2059,7 +2184,7 @@ Scene.prototype.render = function render() {
 module.exports = Scene;
 
 
-},{"./Modifier":8,"./RenderNode":10,"./Transform":14}],12:[function(require,module,exports){
+},{"./Modifier":9,"./RenderNode":11,"./Transform":15}],13:[function(require,module,exports){
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -2218,7 +2343,7 @@ SpecParser.prototype._parseSpec = function _parseSpec(spec, parentContext, sizeC
 module.exports = SpecParser;
 
 
-},{"./Transform":14}],13:[function(require,module,exports){
+},{"./Transform":15}],14:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -2795,7 +2920,7 @@ Surface.prototype.setSize = function setSize(size) {
 module.exports = Surface;
 
 
-},{"./Entity":4,"./EventHandler":6,"./Transform":14}],14:[function(require,module,exports){
+},{"./Entity":5,"./EventHandler":7,"./Transform":15}],15:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -3455,7 +3580,7 @@ Transform.behind = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -1e-3, 1];
 module.exports = Transform;
 
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -3566,7 +3691,7 @@ View.prototype.getSize = function getSize() {
 module.exports = View;
 
 
-},{"./EventHandler":6,"./OptionsManager":9,"./RenderNode":10}],16:[function(require,module,exports){
+},{"./EventHandler":7,"./OptionsManager":10,"./RenderNode":11}],17:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -3855,7 +3980,7 @@ ViewSequence.prototype.render = function render() {
 module.exports = ViewSequence;
 
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -3941,7 +4066,7 @@ EventArbiter.prototype.emit = function emit(eventType, event) {
 module.exports = EventArbiter;
 
 
-},{"../core/EventHandler":6}],18:[function(require,module,exports){
+},{"../core/EventHandler":7}],19:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -4000,7 +4125,7 @@ EventFilter.prototype.trigger = EventFilter.prototype.emit;
 module.exports = EventFilter;
 
 
-},{"../core/EventHandler":6}],19:[function(require,module,exports){
+},{"../core/EventHandler":7}],20:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -4057,7 +4182,7 @@ EventMapper.prototype.trigger = EventMapper.prototype.emit;
 module.exports = EventMapper;
 
 
-},{"../core/EventHandler":6}],20:[function(require,module,exports){
+},{"../core/EventHandler":7}],21:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -4108,7 +4233,7 @@ window.addEventListener('touchend', function(event) {
 });
 
 
-},{}],21:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -4226,7 +4351,7 @@ GenericSync.prototype.setOptions = function setOptions(options) {
 module.exports = GenericSync;
 
 
-},{"../core/EventHandler":6,"./ScrollSync":26,"./TouchSync":27}],22:[function(require,module,exports){
+},{"../core/EventHandler":7,"./ScrollSync":27,"./TouchSync":28}],23:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -4470,7 +4595,7 @@ MouseSync.prototype.setOptions = function setOptions(options) {
 module.exports = MouseSync;
 
 
-},{"../core/EventHandler":6}],23:[function(require,module,exports){
+},{"../core/EventHandler":7}],24:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -4558,7 +4683,7 @@ PinchSync.prototype._moveUpdate = function _moveUpdate(diffTime) {
 module.exports = PinchSync;
 
 
-},{"./TwoFingerSync":29}],24:[function(require,module,exports){
+},{"./TwoFingerSync":30}],25:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -4645,7 +4770,7 @@ RotateSync.prototype._moveUpdate = function _moveUpdate(diffTime) {
 module.exports = RotateSync;
 
 
-},{"./TwoFingerSync":29}],25:[function(require,module,exports){
+},{"./TwoFingerSync":30}],26:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -4746,7 +4871,7 @@ ScaleSync.prototype._moveUpdate = function _moveUpdate(diffTime) {
 module.exports = ScaleSync;
 
 
-},{"./TwoFingerSync":29}],26:[function(require,module,exports){
+},{"./TwoFingerSync":30}],27:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -4953,7 +5078,7 @@ ScrollSync.prototype.setOptions = function setOptions(options) {
 module.exports = ScrollSync;
 
 
-},{"../core/Engine":3,"../core/EventHandler":6}],27:[function(require,module,exports){
+},{"../core/Engine":4,"../core/EventHandler":7}],28:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -5168,7 +5293,7 @@ TouchSync.prototype.getOptions = function getOptions() {
 module.exports = TouchSync;
 
 
-},{"../core/EventHandler":6,"./TouchTracker":28}],28:[function(require,module,exports){
+},{"../core/EventHandler":7,"./TouchTracker":29}],29:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -5276,7 +5401,7 @@ TouchTracker.prototype.track = function track(data) {
 module.exports = TouchTracker;
 
 
-},{"../core/EventHandler":6}],29:[function(require,module,exports){
+},{"../core/EventHandler":7}],30:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -5430,132 +5555,7 @@ TwoFingerSync.prototype.handleEnd = function handleEnd(event) {
 module.exports = TwoFingerSync;
 
 
-},{"../core/EventHandler":6}],30:[function(require,module,exports){
-var famous = {
-    core: {
-        Context: require('./core/Context'),
-        ElementAllocator: require('./core/ElementAllocator'),
-        Engine: require('./core/Engine'),
-        Entity: require('./core/Entity'),
-        EventEmitter: require('./core/EventEmitter'),
-        EventHandler: require('./core/EventHandler'),
-        Group: require('./core/Group'),
-        Modifier: require('./core/Modifier'),
-        OptionsManager: require('./core/OptionsManager'),
-        RenderNode: require('./core/RenderNode'),
-        Scene: require('./core/Scene'),
-        SpecParser: require('./core/SpecParser'),
-        Surface: srequire('./core/Surface'),
-        Transform: require('./core/Transform'),
-        View: require('./core/View'),
-        ViewSequence: require('./core/ViewSequence')
-    },
-    events: {
-        EventArbiter: require('./events/EventArbiter'),
-        EventFilter: require('./events/EventFilter'),
-        EventMapper: require('./events/EventMapper')
-    },
-    inputs: {
-        FastClick: require('./inputs/FastClick'),
-        GenericSync: require('./inputs/GenericSync'),
-        MouseSync: require('./inputs/MouseSync'),
-        PinchSync: require('./inputs/PinchSync'),
-        RotateSync: require('./inputs/RotateSync'),
-        ScaleSync: require('./inputs/ScaleSync'),
-        ScrollSync: require('./inputs/ScrollSync'),
-        TouchSync: require('./inputs/TouchSync'),
-        TouchTracker: require('./inputs/TouchTracker'),
-        TwoFingerSync: require('./inputs/TwoFingerSync')
-    },
-    math: {
-        Matrix: require('./math/Matrix'),
-        Quaternion: require('./math/Quaternion'),
-        Random: require('./math/Random'),
-        Utilities: require('./math/Utilities'),
-        Vector: require('./math/Vector')
-    },
-    modifiers: {
-        Draggable: require('./modifiers/Draggable'),
-        Fader: require('./modifiers/Fader'),
-        ModifierChain: require('./modifiers/ModifierChain'),
-        StateModifier: require('./modifiers/StateModifier')
-    },
-    physics: {
-        bodies: {
-            Body: require('./physics/bodies/Body'),
-            Circle: require('./physics/bodies/Circle'),
-            Particle: require('./physics/bodies/Particle'),
-            Rectangle: require('./physics/bodies/Rectangle')
-        },
-        constraints: {
-            Collision: require('./physics/constraints/Collision'),
-            Constraint: require('./physics/constraints/Constraint'),
-            Curve: require('./physics/constraints/Curve'),
-            Distance: require('./physics/constraints/Distance'),
-            Snap: require('./physics/constraints/Snap'),
-            Surface: require('./physics/constraints/Surface'),
-            Wall: require('./physics/constraints/Wall'),
-            Walls: require('./physics/constraints/Walls')
-        },
-        forces: {
-            Drag: require('./physics/forces/Drag'),
-            Force: require('./physics/forces/Force'),
-            Repulsion: require('./physics/forces/Repulsion'),
-            RotationalDrag: require('./physics/forces/RotationalDrag'),
-            RotationalSpring: require('./physics/forces/RotationalSpring'),
-            Spring: require('./physics/forces/Spring'),
-            VectorField: require('./physics/forces/VectorField')
-        },
-        integrators: {
-            SymplecticEuler: require('./physics/integrators/SymplecticEuler')
-        },
-        PhysicsEngine: require('./physics/PhysicsEngine')
-    },
-    surfaces: {
-        CanvasSurface: require('./surfaces/CanvasSurface'),
-        ContainerSurface: require('./surfaces/ContainerSurface'),
-        ImageSurface: require('./surfaces/ImageSurface'),
-        InputSurface: require('./surfaces/InputSurface'),
-        VideoSurface: require('./surfaces/VideoSurface')
-    },
-    transitions: {
-        CachedMap: require('./transitions/CachedMap'),
-        Easing: require('./transitions/Easing'),
-        MultipleTransition: require('./transitions/MultipleTransition'),
-        SnapTransition: require('./transitions/SnapTransition'),
-        SpringTransition: require('./transitions/SpringTransition'),
-        Transitionable: require('./transitions/Transitionable'),
-        TransitionableTransform: require('./transitions/TransitionableTransform'),
-        TweenTransition: require('./transitions/TweenTransition'),
-        WallTransition: require('./transitions/WallTransition')
-    },
-    utilities: {
-        KeyCodes: require('./utilities/KeyCodes'),
-        Timer: require('./utilities/Timer'),
-        Utility: require('./utilities/Utility')
-    },
-    views: {
-        Deck: require('./views/Deck'),
-        EdgeSwapper: require('./views/EdgeSwapper'),
-        Flipper: require('./views/Flipper'),
-        GridLayout: require('./views/GridLayout'),
-        HeaderFooterLayout: require('./views/HeaderFooterLayout'),
-        Lightbox: require('./views/Lightbox'),
-        RenderController: require('./views/RenderController'),
-        ScrollContainer: require('./views/ScrollContainer'),
-        Scroller: require('./views/Scroller'),
-        Scrollview: require('./views/ScrollView'),
-        SequentialLayout: require('./views/SequentialLayout')
-    },
-    widgets: {
-        NavigationBar: require('./widgets/NavigationBar'),
-        Slider: require('./widgets/Slider'),
-        TabBar: require('./widgets/TabBar'),
-        ToggleButton: require('./widgets/ToggleButton'),
-    }
-};
-
-},{"./core/Context":1,"./core/ElementAllocator":2,"./core/Engine":3,"./core/Entity":4,"./core/EventEmitter":5,"./core/EventHandler":6,"./core/Group":7,"./core/Modifier":8,"./core/OptionsManager":9,"./core/RenderNode":10,"./core/Scene":11,"./core/SpecParser":12,"./core/Transform":14,"./core/View":15,"./core/ViewSequence":16,"./events/EventArbiter":17,"./events/EventFilter":18,"./events/EventMapper":19,"./inputs/FastClick":20,"./inputs/GenericSync":21,"./inputs/MouseSync":22,"./inputs/PinchSync":23,"./inputs/RotateSync":24,"./inputs/ScaleSync":25,"./inputs/ScrollSync":26,"./inputs/TouchSync":27,"./inputs/TouchTracker":28,"./inputs/TwoFingerSync":29,"./math/Matrix":31,"./math/Quaternion":32,"./math/Random":33,"./math/Utilities":34,"./math/Vector":35,"./modifiers/Draggable":36,"./modifiers/Fader":37,"./modifiers/ModifierChain":38,"./modifiers/StateModifier":39,"./physics/PhysicsEngine":40,"./physics/bodies/Body":41,"./physics/bodies/Circle":42,"./physics/bodies/Particle":43,"./physics/bodies/Rectangle":44,"./physics/constraints/Collision":45,"./physics/constraints/Constraint":46,"./physics/constraints/Curve":47,"./physics/constraints/Distance":48,"./physics/constraints/Snap":49,"./physics/constraints/Surface":50,"./physics/constraints/Wall":51,"./physics/constraints/Walls":52,"./physics/forces/Drag":53,"./physics/forces/Force":54,"./physics/forces/Repulsion":55,"./physics/forces/RotationalDrag":56,"./physics/forces/RotationalSpring":57,"./physics/forces/Spring":58,"./physics/forces/VectorField":59,"./physics/integrators/SymplecticEuler":60,"./surfaces/CanvasSurface":61,"./surfaces/ContainerSurface":62,"./surfaces/ImageSurface":63,"./surfaces/InputSurface":64,"./surfaces/VideoSurface":65,"./transitions/CachedMap":66,"./transitions/Easing":67,"./transitions/MultipleTransition":68,"./transitions/SnapTransition":69,"./transitions/SpringTransition":70,"./transitions/Transitionable":71,"./transitions/TransitionableTransform":72,"./transitions/TweenTransition":73,"./transitions/WallTransition":74,"./utilities/KeyCodes":75,"./utilities/Timer":76,"./utilities/Utility":77,"./views/Deck":78,"./views/EdgeSwapper":79,"./views/Flipper":80,"./views/GridLayout":81,"./views/HeaderFooterLayout":82,"./views/Lightbox":83,"./views/RenderController":84,"./views/ScrollContainer":85,"./views/ScrollView":86,"./views/Scroller":87,"./views/SequentialLayout":89,"./widgets/NavigationBar":90,"./widgets/Slider":91,"./widgets/TabBar":92,"./widgets/ToggleButton":93}],31:[function(require,module,exports){
+},{"../core/EventHandler":7}],31:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -6942,7 +6942,7 @@ module.exports = Draggable;
 
 
 
-},{"../core/EventHandler":6,"../core/Transform":14,"../inputs/GenericSync":21,"../inputs/MouseSync":22,"../inputs/TouchSync":27,"../math/Utilities":34,"../transitions/Transitionable":71}],37:[function(require,module,exports){
+},{"../core/EventHandler":7,"../core/Transform":15,"../inputs/GenericSync":22,"../inputs/MouseSync":23,"../inputs/TouchSync":28,"../math/Utilities":34,"../transitions/Transitionable":71}],37:[function(require,module,exports){
 
 var Transitionable = require('../transitions/Transitionable');
 var OptionsManager = require('../core/OptionsManager');
@@ -7066,7 +7066,7 @@ Fader.prototype.modify = function modify(target) {
 module.exports = Fader;
 
 
-},{"../core/OptionsManager":9,"../transitions/Transitionable":71}],38:[function(require,module,exports){
+},{"../core/OptionsManager":10,"../transitions/Transitionable":71}],38:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7362,7 +7362,7 @@ StateModifier.prototype.modify = function modify(target) {
 module.exports = StateModifier;
 
 
-},{"../core/Modifier":8,"../core/Transform":14,"../transitions/Transitionable":71,"../transitions/TransitionableTransform":72}],40:[function(require,module,exports){
+},{"../core/Modifier":9,"../core/Transform":15,"../transitions/Transitionable":71,"../transitions/TransitionableTransform":72}],40:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7824,7 +7824,7 @@ PhysicsEngine.prototype.on = function on(event, fn) {
 module.exports = PhysicsEngine;
 
 
-},{"../core/EventHandler":6}],41:[function(require,module,exports){
+},{"../core/EventHandler":7}],41:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -8054,7 +8054,7 @@ Body.prototype.integrateOrientation = function integrateOrientation(dt) {
 module.exports = Body;
 
 
-},{"../../core/Transform":14,"../../math/Matrix":31,"../../math/Quaternion":32,"../../math/Vector":35,"./Particle":43}],42:[function(require,module,exports){
+},{"../../core/Transform":15,"../../math/Matrix":31,"../../math/Quaternion":32,"../../math/Vector":35,"./Particle":43}],42:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -8548,7 +8548,7 @@ Particle.prototype.unpipe = function unpipe() {
 module.exports = Particle;
 
 
-},{"../../core/EventHandler":6,"../../core/Transform":14,"../../math/Vector":35,"../integrators/SymplecticEuler":60}],44:[function(require,module,exports){
+},{"../../core/EventHandler":7,"../../core/Transform":15,"../../math/Vector":35,"../integrators/SymplecticEuler":60}],44:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -8879,7 +8879,7 @@ Constraint.prototype.unpipe = function unpipe() {
 module.exports = Constraint;
 
 
-},{"../../core/EventHandler":6}],47:[function(require,module,exports){
+},{"../../core/EventHandler":7}],47:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -10360,7 +10360,7 @@ Force.prototype.unpipe = function unpipe() {
 module.exports = Force;
 
 
-},{"../../core/EventHandler":6,"../../math/Vector":35}],55:[function(require,module,exports){
+},{"../../core/EventHandler":7,"../../math/Vector":35}],55:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -11361,7 +11361,7 @@ SymplecticEuler.prototype.integrateOrientation = function integrateOrientation(b
 module.exports = SymplecticEuler;
 
 
-},{"../../core/OptionsManager":9}],61:[function(require,module,exports){
+},{"../../core/OptionsManager":10}],61:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -11480,7 +11480,7 @@ CanvasSurface.prototype.setSize = function setSize(size, canvasSize) {
 module.exports = CanvasSurface;
 
 
-},{"../core/Surface":13}],62:[function(require,module,exports){
+},{"../core/Surface":14}],62:[function(require,module,exports){
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -11597,7 +11597,7 @@ ContainerSurface.prototype.commit = function commit(context, transform, opacity,
 module.exports = ContainerSurface;
 
 
-},{"../core/Context":1,"../core/Surface":13}],63:[function(require,module,exports){
+},{"../core/Context":2,"../core/Surface":14}],63:[function(require,module,exports){
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -11667,7 +11667,7 @@ ImageSurface.prototype.recall = function recall(target) {
 module.exports = ImageSurface;
 
 
-},{"../core/Surface":13}],64:[function(require,module,exports){
+},{"../core/Surface":14}],64:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -11826,7 +11826,7 @@ InputSurface.prototype.deploy = function deploy(target) {
 module.exports = InputSurface;
 
 
-},{"../core/Surface":13}],65:[function(require,module,exports){
+},{"../core/Surface":14}],65:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -11927,7 +11927,7 @@ VideoSurface.prototype.recall = function recall(target) {
 module.exports = VideoSurface;
 
 
-},{"../core/Surface":13}],66:[function(require,module,exports){
+},{"../core/Surface":14}],66:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -13330,7 +13330,7 @@ TransitionableTransform.prototype.halt = function halt() {
 module.exports = TransitionableTransform;
 
 
-},{"../core/Transform":14,"../utilities/Utility":77,"./Transitionable":71}],73:[function(require,module,exports){
+},{"../core/Transform":15,"../utilities/Utility":77,"./Transitionable":71}],73:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -14346,7 +14346,7 @@ module.exports = {
 
 
 
-},{"../core/Engine":3}],77:[function(require,module,exports){
+},{"../core/Engine":4}],77:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -14582,7 +14582,7 @@ Deck.prototype.toggle = function toggle(callback) {
 module.exports = Deck;
 
 
-},{"../core/OptionsManager":9,"../core/Transform":14,"../transitions/Transitionable":71,"../utilities/Utility":77,"./SequentialLayout":89}],79:[function(require,module,exports){
+},{"../core/OptionsManager":10,"../core/Transform":15,"../transitions/Transitionable":71,"../utilities/Utility":77,"./SequentialLayout":89}],79:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -14690,7 +14690,7 @@ EdgeSwapper.prototype.commit = function commit(context) {
 module.exports = EdgeSwapper;
 
 
-},{"../core/Entity":4,"../core/EventHandler":6,"../core/Transform":14,"../transitions/CachedMap":66,"./RenderController":84}],80:[function(require,module,exports){
+},{"../core/Entity":5,"../core/EventHandler":7,"../core/Transform":15,"../transitions/CachedMap":66,"./RenderController":84}],80:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -14818,7 +14818,7 @@ Flipper.prototype.render = function render() {
 module.exports = Flipper;
 
 
-},{"../core/OptionsManager":9,"../core/RenderNode":10,"../core/Transform":14,"../transitions/Transitionable":71,"../utilities/Utility":77}],81:[function(require,module,exports){
+},{"../core/OptionsManager":10,"../core/RenderNode":11,"../core/Transform":15,"../transitions/Transitionable":71,"../utilities/Utility":77}],81:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -15019,7 +15019,7 @@ GridLayout.prototype.commit = function commit(context) {
 module.exports = GridLayout;
 
 
-},{"../core/Entity":4,"../core/Modifier":8,"../core/OptionsManager":9,"../core/RenderNode":10,"../core/Transform":14,"../core/ViewSequence":16,"../transitions/Transitionable":71,"../transitions/TransitionableTransform":72}],82:[function(require,module,exports){
+},{"../core/Entity":5,"../core/Modifier":9,"../core/OptionsManager":10,"../core/RenderNode":11,"../core/Transform":15,"../core/ViewSequence":17,"../transitions/Transitionable":71,"../transitions/TransitionableTransform":72}],82:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -15177,7 +15177,7 @@ HeaderFooterLayout.prototype.commit = function commit(context) {
 module.exports = HeaderFooterLayout;
 
 
-},{"../core/Entity":4,"../core/OptionsManager":9,"../core/RenderNode":10,"../core/Transform":14}],83:[function(require,module,exports){
+},{"../core/Entity":5,"../core/OptionsManager":10,"../core/RenderNode":11,"../core/Transform":15}],83:[function(require,module,exports){
 
 var Transform = require('../core/Transform');
 var Modifier = require('../core/Modifier');
@@ -15356,7 +15356,7 @@ Lightbox.prototype.render = function render() {
 module.exports = Lightbox;
 
 
-},{"../core/Modifier":8,"../core/OptionsManager":9,"../core/RenderNode":10,"../core/Transform":14,"../transitions/Transitionable":71,"../transitions/TransitionableTransform":72,"../utilities/Utility":77}],84:[function(require,module,exports){
+},{"../core/Modifier":9,"../core/OptionsManager":10,"../core/RenderNode":11,"../core/Transform":15,"../transitions/Transitionable":71,"../transitions/TransitionableTransform":72,"../utilities/Utility":77}],84:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -15660,7 +15660,7 @@ RenderController.prototype.render = function render() {
 module.exports = RenderController;
 
 
-},{"../core/Modifier":8,"../core/RenderNode":10,"../core/Transform":14,"../core/View":15,"../transitions/Transitionable":71}],85:[function(require,module,exports){
+},{"../core/Modifier":9,"../core/RenderNode":11,"../core/Transform":15,"../core/View":16,"../transitions/Transitionable":71}],85:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -15745,7 +15745,7 @@ ScrollContainer.prototype.render = function render() {
 module.exports = ScrollContainer;
 
 
-},{"../core/EventHandler":6,"../core/OptionsManager":9,"../surfaces/ContainerSurface":62,"../utilities/Utility":77,"./Scrollview":88}],86:[function(require,module,exports){
+},{"../core/EventHandler":7,"../core/OptionsManager":10,"../surfaces/ContainerSurface":62,"../utilities/Utility":77,"./Scrollview":88}],86:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -16220,7 +16220,7 @@ Scrollview.prototype.render = function render() {
 module.exports = Scrollview;
 
 
-},{"../core/EventHandler":6,"../core/OptionsManager":9,"../core/ViewSequence":16,"../inputs/GenericSync":21,"../physics/PhysicsEngine":40,"../physics/bodies/Particle":43,"../physics/forces/Drag":53,"../physics/forces/Spring":58,"../utilities/Utility":77,"../views/Scroller":87}],87:[function(require,module,exports){
+},{"../core/EventHandler":7,"../core/OptionsManager":10,"../core/ViewSequence":17,"../inputs/GenericSync":22,"../physics/PhysicsEngine":40,"../physics/bodies/Particle":43,"../physics/forces/Drag":53,"../physics/forces/Spring":58,"../utilities/Utility":77,"../views/Scroller":87}],87:[function(require,module,exports){
 
 var Entity = require('../core/Entity');
 var Group = require('../core/Group');
@@ -16520,9 +16520,9 @@ function _innerRender() {
 module.exports = Scroller;
 
 
-},{"../core/Entity":4,"../core/EventHandler":6,"../core/Group":7,"../core/OptionsManager":9,"../core/Transform":14,"../core/ViewSequence":16,"../utilities/Utility":77}],88:[function(require,module,exports){
+},{"../core/Entity":5,"../core/EventHandler":7,"../core/Group":8,"../core/OptionsManager":10,"../core/Transform":15,"../core/ViewSequence":17,"../utilities/Utility":77}],88:[function(require,module,exports){
 module.exports=require(86)
-},{"../core/EventHandler":6,"../core/OptionsManager":9,"../core/ViewSequence":16,"../inputs/GenericSync":21,"../physics/PhysicsEngine":40,"../physics/bodies/Particle":43,"../physics/forces/Drag":53,"../physics/forces/Spring":58,"../utilities/Utility":77,"../views/Scroller":87}],89:[function(require,module,exports){
+},{"../core/EventHandler":7,"../core/OptionsManager":10,"../core/ViewSequence":17,"../inputs/GenericSync":22,"../physics/PhysicsEngine":40,"../physics/bodies/Particle":43,"../physics/forces/Drag":53,"../physics/forces/Spring":58,"../utilities/Utility":77,"../views/Scroller":87}],89:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -16671,7 +16671,7 @@ SequentialLayout.prototype.render = function render() {
 module.exports = SequentialLayout;
 
 
-},{"../core/OptionsManager":9,"../core/Transform":14,"../core/ViewSequence":16,"../utilities/Utility":77}],90:[function(require,module,exports){
+},{"../core/OptionsManager":10,"../core/Transform":15,"../core/ViewSequence":17,"../utilities/Utility":77}],90:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -16815,7 +16815,7 @@ NavigationBar.prototype.setContent = function setContent(content) {
 module.exports = NavigationBar;
 
 
-},{"../core/Scene":11,"../core/Surface":13,"../core/Transform":14,"../core/View":15}],91:[function(require,module,exports){
+},{"../core/Scene":12,"../core/Surface":14,"../core/Transform":15,"../core/View":16}],91:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -16949,7 +16949,7 @@ Slider.prototype.render = function render()
 module.exports = Slider;
 
 
-},{"../core/EventHandler":6,"../core/Surface":13,"../core/Transform":14,"../inputs/GenericSync":21,"../surfaces/CanvasSurface":61}],92:[function(require,module,exports){
+},{"../core/EventHandler":7,"../core/Surface":14,"../core/Transform":15,"../inputs/GenericSync":22,"../surfaces/CanvasSurface":61}],92:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -17102,7 +17102,7 @@ TabBar.prototype.select = function select(id) {
 module.exports = TabBar;
 
 
-},{"../core/View":15,"../utilities/Utility":77,"../views/GridLayout":81,"./ToggleButton":93}],93:[function(require,module,exports){
+},{"../core/View":16,"../utilities/Utility":77,"../views/GridLayout":81,"./ToggleButton":93}],93:[function(require,module,exports){
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -17263,4 +17263,4 @@ ToggleButton.prototype.render = function render() {
 module.exports = ToggleButton;
 
 
-},{"../core/EventHandler":6,"../core/Surface":13,"../views/RenderController":84}]},{},[30])
+},{"../core/EventHandler":7,"../core/Surface":14,"../views/RenderController":84}]},{},[1])
