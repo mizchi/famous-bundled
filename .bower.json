@@ -1,0 +1,17 @@
+{
+  "name": "famous-bundled",
+  "version": "0.1.1",
+  "main": "famous.js",
+  "homepage": "https://github.com/aelr/famous-commonjs",
+  "authors": [
+    "Koutarou Chikuba <miz404@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
