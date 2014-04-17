@@ -1,0 +1,3 @@
+#!/bin/sh
+browserify bundler.js -o famous.js
+uglifyjs -c -o ./famous.min.js --source-map ./famous.js.map ./famous.js 
