@@ -1,3 +1,27 @@
+Famo.us bundled
+================
+
+This is fork of below Famo.us CommonJS and I added build bundled famous.js.
+global varialbe version. no dependencies to browserify nor AMD.
+
+
+## How to use
+
+Add to `bower.json`
+```
+dependencies: {
+	"famous": "mizchi/famous-bundled"
+}
+```
+
+And use it.
+
+```
+var Engine = famous.core.Engine;
+```
+
+This is spike implementation so i will not maintaine it continuously.
+
 Famo.us CommonJS
 ================
 
